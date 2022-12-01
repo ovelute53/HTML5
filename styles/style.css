@@ -1,9 +1,19 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
+/* 기본 스타일 */
+*, *::before, *::after{
+  box-sizing: border-box;
+  /* content-box: 설정한 width 값 + padding + border + margin */
+  /* border-box: 설정한 width 값 속에 margin + border + padding 포함. */
+}
+
+
 /* footer는 100%, 나머지 영역은 940px로 적용 */
 /* 좌우 여백이 브라우저, 창의 크기마다 유동적이게끔 설정 */
 
+
+/* 본문 스타일 */
 body {
   background-color: #ffc;
   /* margin: 0;
@@ -16,9 +26,6 @@ body {
 /* layout */
 .header, .visual, .main, .slogan, .footer-inner {
   width: 940px;
-  box-sizing: border-box;
-  /* content-box: width+padding+border+margin */
-  /* border-box: padding+border+margin => width */
   margin: 0 auto;
   /* 0 auto = 브라우저의 크기 맞게 왼쪽,오른쪽 여백을 자동으로 변경된다. */
 }
@@ -41,6 +48,65 @@ body {
 .main {
   background: lightgreen;
   height: 50vh;
+  display: flow-root;
+  padding: 0 15px;
+  /* main area에 height를 지정하지 않았을 때 float 설정을 하게된다면 main area의 height가 줄어든다. */
+  /* 
+  height가 지정되지 않았을 떄 float의 부모요소에 display: flow-root; 적용시키면 레이아웃이 무너지지 않는다.
+
+  float의 부모요소에 overflow: hidden;을 사용할 경우 자주 쓰지만 올바른 방법은 아니다.
+  overflow는 넘치는 영역에 대한 처리를 하는 역할을 한다.
+  잠재적 위험도: position property로 좌표값을 사용할 경우 일부가 안보이는 경우가 생긴다.
+  */
+  
+  /* BFC = block formatting context, IFC = inline formatting context */
+
+  /* 부모요소에 float을 적용할 경우는 double float할 때 */
+}
+/* 
+.main::before {
+  content: "첫번째 자식요소입니다.";
+}
+.main::after {
+  content: "마지막 자식요소입니다.";
+
+  가상요소를 만들어내는 요소이다.
+} 
+*/
+
+/* 
+첫 번째 그룹 250px, 중간 380px, 마지막 190px 각 여백 30px = 940px
+position, float, display(inline-block, flex, grid) 방식으로 영역 설정할 수 있음.
+*/
+/* .clearfix {
+  clear: both;
+  clear속성이 동작하는 동안 flow속성의 높이를 읽는다.
+  float을 무시할거야!
+} */
+
+/* .main::after {
+  content: "";
+  clear: both;
+  display: block;
+  
+  ::after요소는 inline요소이기 떄문에 block처리한다.
+} */
+.group {
+  margin: 0 15px;
+  float: left;
+}
+
+.group1 {
+  background-color: violet;
+  width: 250px;
+}
+.group2 {
+  background-color: salmon;
+  width: 380px;
+}
+.group3 {
+  background-color: gold;
+  width: 190px;
 }
 
 /* slogan area */
