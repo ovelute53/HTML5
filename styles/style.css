@@ -1,25 +1,59 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
+/* footer는 100%, 나머지 영역은 940px로 적용 */
+/* 좌우 여백이 브라우저, 창의 크기마다 유동적이게끔 설정 */
+
 body {
   background-color: #ffc;
   /* margin: 0;
-     ->에이전트 스타일시트의 margin값을 0으로 설정. */
+     -> 모든 브라우저는 고유의 agent stylesheet가 있다.
+     -> agenmt stylesheet의 margin값을 0으로 설정. */
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 400;
 }
+
+/* layout */
+.header, .visual, .main, .slogan, .footer-inner {
+  width: 940px;
+  box-sizing: border-box;
+  /* content-box: width+padding+border+margin */
+  /* border-box: padding+border+margin => width */
+  margin: 0 auto;
+  /* 0 auto = 브라우저의 크기 맞게 왼쪽,오른쪽 여백을 자동으로 변경된다. */
+}
+
+/* header */
 .header {
   background: pink;
+  padding: 0 30px;
+  height: 15vh;
+  /* vh= viewpoint의 약어 */
 }
+
+/* visual area */
 .visual {
   background: orange;
+  height: 10vh;
 }
+
+/* main area */
 .main {
   background: lightgreen;
+  height: 50vh;
 }
+
+/* slogan area */
 .slogan {
   background: skyblue;
+  height: 10vh;
 }
+
+/* footer area */
 .footer {
-  background: lightgray;
+  background: gray;
+}
+.footer-inner {
+  background: silver;
+  height: 15vh;
 }
