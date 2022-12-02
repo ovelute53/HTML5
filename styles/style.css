@@ -47,9 +47,14 @@ body {
 /* main area */
 .main {
   background: lightgreen;
-  height: 50vh;
   display: flex;
+  min-height: 450px;
   flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  /* flex-flow: row nowrap;의 short hand로 간단하게 표기 가능 */
   /* main area에 height를 지정하지 않았을 때 float 설정을 하게된다면 main area의 height가 줄어든다. */
   /* 
   height가 지정되지 않았을 떄 float의 부모요소에 display: flow-root; 적용시키면 레이아웃이 무너지지 않는다.
@@ -102,6 +107,7 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 }
 .group3 {
   background-color: gold;
+  /*flex-grow: 1;*/
   width: 190px;
 }
 
