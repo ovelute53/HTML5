@@ -48,8 +48,8 @@ body {
 .main {
   background: lightgreen;
   height: 50vh;
-  display: flow-root;
-  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
   /* main area에 height를 지정하지 않았을 때 float 설정을 하게된다면 main area의 height가 줄어든다. */
   /* 
   height가 지정되지 않았을 떄 float의 부모요소에 display: flow-root; 적용시키면 레이아웃이 무너지지 않는다.
@@ -91,10 +91,6 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   
   ::after요소는 inline요소이기 떄문에 block처리한다.
 } */
-.group {
-  margin: 0 15px;
-  float: left;
-}
 
 .group1 {
   background-color: violet;
