@@ -15,7 +15,7 @@
 
 /* 본문 스타일 */
 body {
-  background-color: #ffc;
+  background-color: #ccc;
   /* margin: 0;
      -> 모든 브라우저는 고유의 agent stylesheet가 있다.
      -> agenmt stylesheet의 margin값을 0으로 설정. */
@@ -32,11 +32,27 @@ body {
 
 /* header */
 .header {
-  background: pink;
+  background: #fff;
   padding: 0 30px;
   height: 15vh;
   /* vh= viewpoint의 약어 */
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  top: 50px;
 }
+
+/* logo */
+.logo { 
+  position: absolute;
+  top: 45px;
+  left: 60px;
+}
+
+/* 텍스트 링크 모음 */
+.member {
+  background-color: lightblue;
+}
+
 
 /* visual area */
 .visual {
