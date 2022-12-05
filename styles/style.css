@@ -2,12 +2,13 @@
 @import url(./reset.css);
 
 /* 기본 스타일 */
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   /* content-box: 설정한 width 값 + padding + border + margin */
   /* border-box: 설정한 width 값 속에 margin + border + padding 포함. */
 }
-
 
 /* footer는 100%, 나머지 영역은 940px로 적용 */
 /* 좌우 여백이 브라우저, 창의 크기마다 유동적이게끔 설정 */
@@ -32,10 +33,27 @@ body {
 
 /* header */
 .header {
-  background: pink;
+  background: #fff;
   padding: 0 30px;
   height: 15vh;
+  border-radius: 0 0 15px 15px;
   /* vh= viewpoint의 약어 */
+}
+
+.member {
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+/* :before / ::before => first-child */
+/* :after / ::after => last-child */
+.member li::before {
+  content: ":";
+}
+
+li.first::before {
+  content:"" ;
 }
 
 /* visual area */
