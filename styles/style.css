@@ -48,12 +48,21 @@ body {
 }
 /* :before / ::before => first-child */
 /* :after / ::after => last-child */
-.member li::before {
+/* .member li::before {
   content: ":";
 }
 
 li.first::before {
   content:"" ;
+} */
+
+.member li:nth-child(n+2)::before{
+  content: ":";
+  background-color: skyblue;
+}
+
+.member li:nth-child(n+2):nth-child(-n+4){
+  background-color: yellow;
 }
 
 /* visual area */
