@@ -15,8 +15,15 @@
 /* 좌우 여백이 브라우저, 창의 크기마다 유동적이게끔 설정 */
 
 
+/* 링크 스타일 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* 본문 스타일 */
 body {
+  color: #212121;
   background-color: #ffc;
   /* margin: 0;
      -> 모든 브라우저는 고유의 agent stylesheet가 있다.
@@ -77,6 +84,9 @@ li.first::before {
   margin-right: .2em;
   text-align: center;
 } */
+.member a {
+  text-transform: uppercase;
+}
 
 /* visual area */
 .visual {
