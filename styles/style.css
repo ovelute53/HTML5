@@ -61,6 +61,9 @@ body {
   background-color: aqua;
   text-align: right;
   padding: 4px 0;
+  /* position 속성을 활용하여 .member 영역을 오른쪽으로 10xp 만큼 이동하기 */
+  position: relative;
+  right: -10px;
 }
 
 .member li {
@@ -68,10 +71,10 @@ body {
   display: inline-block;
 }
 
-.memnber li:last-child a {
+/* 마지막 li 요소에 포함된 a요소를 선택하여 오른쪽 padding 0으로 재정의하는 방법*/
+/* .memnber li:last-child a {
   padding-right: 0;
-  /* 마지막 li 요소에 포함된 a요소를 선택하여 오른쪽 padding 0으로 재정의하는 방법*/
-}
+} */
 
 .member a {
   background-color: coral;
