@@ -60,7 +60,7 @@ a {
   width: 100%;
   background: #000;
   color: #fff;
-  text-align: justify-content: center;
+  justify-content: center;
   text-align: center;
   padding: 1em 0;
   transform: translate(-110%, 0);
