@@ -39,7 +39,7 @@ body {
   /* em, rem 단위를 사용해보기 */
   font-size: 1.4rem;
   color: #212121;
-  background-color: #ccc;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 70%, #fff 100%);
   /* margin: 0;
      -> 모든 브라우저는 고유의 agent stylesheet가 있다.
      -> agenmt stylesheet의 margin값을 0으로 설정. */
@@ -100,14 +100,32 @@ body {
 }
 
 /* main menu */
+.navigation {
+  padding-bottom: 80px;
+}
 .menu {
-  background: #e85e2c;
-  background-image: linear-gradient(
+  border-top: 2px solid currentColor;
+  background: #e85e2c linear-gradient(
+    to bottom,
     #ef9126 0%,
     #e85e2c 35%,
     #e85e2c 70%,
     #ef9126 100%
   );
+  border-radius: 0 0 5px 5px;
+  display: flow-root;
+  padding-left: 230px;
+}
+
+.menu-item {
+  background-color: aqua;
+  float: left;
+}
+
+.sub-menu {
+  background-color: pink;
+  position: absolute;
+  display: none;
 }
 
 /* visual area */
@@ -190,7 +208,7 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 
 /* footer area */
 .footer {
-  background: gray;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 70%, #fff 100%);
 }
 .footer-inner {
   background: silver;
