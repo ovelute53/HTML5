@@ -99,6 +99,17 @@ body {
   margin-right: 4px;
 }
 
+/* main menu */
+.menu {
+  background: #e85e2c;
+  background-image: linear-gradient(
+    #ef9126 0%,
+    #e85e2c 35%,
+    #e85e2c 70%,
+    #ef9126 100%
+  );
+}
+
 /* visual area */
 .visual {
   background: orange;
