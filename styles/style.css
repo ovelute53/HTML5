@@ -46,7 +46,7 @@ body {
   /* vh= viewpoint의 약어 */
   border-radius: 0 0 15px 15px;
   position: relative;
-  top: 50px;
+  /* top: 50px; */
 }
 
 /* logo */
@@ -58,7 +58,7 @@ body {
 
 /* 텍스트 링크 모음 */
 .member {
-  /*background-color: lightblue;*/
+  background-color: aqua;
   text-align: right;
   padding: 4px 0;
 }
@@ -68,10 +68,16 @@ body {
   display: inline-block;
 }
 
+.memnber li:last-child a {
+  padding-right: 0;
+  /* 마지막 li 요소에 포함된 a요소를 선택하여 오른쪽 padding 0으로 재정의하는 방법*/
+}
+
 .member a {
   background-color: coral;
   padding: 6px 10px;
   display: inherit;
+  text-transform: uppercase;
 }
 
 .divider {
@@ -153,6 +159,7 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 .slogan {
   background: skyblue;
   height: 10vh;
+  clear: both;
 }
 
 /* footer area */
