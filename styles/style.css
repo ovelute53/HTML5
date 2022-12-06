@@ -113,13 +113,26 @@ body {
     #ef9126 100%
   );
   border-radius: 0 0 5px 5px;
-  display: flow-root;
+  /* display: flow-root; */
   padding-left: 230px;
+  height: 47px;
 }
 
 .menu-item {
-  background-color: aqua;
+  /* background-color: aqua; */
   float: left;
+  border-left: 2px solid #fefefe;
+}
+
+.menu-button {
+  border:0;
+  background: transparent;
+  padding: 0 23px;
+  line-height: 45px;
+  font-size: 15px;
+  font-weight: 700;
+  color: aliceblue;
+  text-shadow: 2px 2px 2px #212121;
 }
 
 .sub-menu {
