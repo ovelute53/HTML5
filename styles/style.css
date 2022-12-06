@@ -8,6 +8,9 @@
   /* border-box: 설정한 width 값 속에 margin + border + padding 포함. */
 }
 
+html {
+  font-size: 10px;
+}
 
 /* 링크 스타일 */
 a {
@@ -22,6 +25,8 @@ a {
 
 /* 본문 스타일 */
 body {
+  /* em, rem 단위를 사용해보기 */
+  font-size: 1.4rem;
   color: #212121;
   background-color: #ccc;
   /* margin: 0;
