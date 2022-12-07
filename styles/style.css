@@ -118,8 +118,10 @@ body {
   height: 47px;
 }
 
+
 .menu-item {
   /* background-color: aqua; */
+  position: relative;
   float: left;
   border-left: 2px solid #fefefe;
 }
@@ -151,7 +153,17 @@ body {
 .sub-menu {
   background-color: pink;
   position: absolute;
+  top: 47px;
+  left: 0;
   display: none;
+}
+
+.is-active .sub-menu {
+  display: block;
+}
+
+.sub-menu li {
+  /* display: inline-block; */
 }
 
 /* visual area */
