@@ -213,9 +213,25 @@ body {
 }
 
 /* visual area */
+
+@keyframes moveEffect {
+  0% {
+    font-size: 12px;
+  }
+  100% {
+    font-size: 24px;
+  }
+}
+
 .visual {
-  background: orange;
+  background: pink;
   height: 10vh;
+}
+
+.visual-text {
+  background-color: coral;
+  animation-name: moveEffect;
+  animation-duration: 2000ms;
 }
 
 /* main area */
