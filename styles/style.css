@@ -41,16 +41,17 @@ body {
   /* em, rem 단위를 사용해보기 */
   font-size: 1.4rem;
   color: #212121;
-  background: #ccc
-    linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 70%, #fff 100%);
-  /* margin: 0;
-     -> 모든 브라우저는 고유의 agent stylesheet가 있다.
-     -> agenmt stylesheet의 margin값을 0으로 설정. */
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 400;
+  background: url(./images/bg_flower.png) no-repeat 50% 0,
+    #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 70%, #fff 100%)
+      repeat 0 0;
+  /* margin: 0;
+     -> 모든 브라우저는 고유의 agent stylesheet가 있다.
+     -> agenmt stylesheet의 margin값을 0으로 설정. */
 }
 
 /* layout */
@@ -66,7 +67,7 @@ body {
 
 /* header */
 .header {
-  background: #fff;
+  background: #efefef;
   padding: 0 30px;
   border-radius: 0 0 15px 15px;
   position: relative;
@@ -241,7 +242,6 @@ body {
 }
 
 .visual {
-  background: pink;
   height: 120px;
   position: relative;
 }
@@ -252,7 +252,6 @@ body {
   animation-duration: 3000ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  background-color: coral;
   position: absolute;
 }
 
