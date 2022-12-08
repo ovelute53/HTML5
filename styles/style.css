@@ -14,7 +14,9 @@
 }
 
 /* 기본 스타일 */
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   /* content-box: 설정한 width 값 + padding + border + margin */
   /* border-box: 설정한 width 값 속에 margin + border + padding 포함. */
@@ -29,27 +31,34 @@ a {
   color: inherit;
   /* inherit 부모의 요소를 상속받는다. */
   text-decoration: none;
-} 
+}
 
 /* footer는 100%, 나머지 영역은 940px로 적용 */
 /* 좌우 여백이 브라우저, 창의 크기마다 유동적이게끔 설정 */
-
 
 /* 본문 스타일 */
 body {
   /* em, rem 단위를 사용해보기 */
   font-size: 1.4rem;
   color: #212121;
-  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 70%, #fff 100%);
+  background: #ccc
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 70%, #fff 100%);
   /* margin: 0;
      -> 모든 브라우저는 고유의 agent stylesheet가 있다.
      -> agenmt stylesheet의 margin값을 0으로 설정. */
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 400;
 }
 
 /* layout */
-.header, .visual, .main, .slogan, .footer-inner {
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
   width: 940px;
   margin: 0 auto;
   /* 0 auto = 브라우저의 크기 맞게 왼쪽,오른쪽 여백을 자동으로 변경된다. */
@@ -64,7 +73,7 @@ body {
 }
 
 /* logo */
-.logo { 
+.logo {
   position: absolute;
   top: 45px;
   left: 60px;
@@ -107,13 +116,14 @@ body {
 }
 .menu {
   border-top: 2px solid currentColor;
-  background: #e85e2c linear-gradient(
-    to bottom,
-    #ef9126 0%,
-    #e85e2c 35%,
-    #e85e2c 70%,
-    #ef9126 100%
-  );
+  background: #e85e2c
+    linear-gradient(
+      to bottom,
+      #ef9126 0%,
+      #e85e2c 35%,
+      #e85e2c 70%,
+      #ef9126 100%
+    );
   border-radius: 0 0 5px 5px;
   /* display: flow-root; */
   padding-left: 230px;
@@ -121,7 +131,7 @@ body {
   position: relative;
 }
 
-.menu > li:nth-child(-n+3){
+.menu > li:nth-child(-n + 3) {
   position: relative;
 }
 
@@ -132,7 +142,7 @@ body {
 }
 
 .menu-button {
-  border:0;
+  border: 0;
   background: transparent;
   padding: 0 23px;
   line-height: 45px;
@@ -141,7 +151,6 @@ body {
   color: aliceblue;
   text-shadow: 2px 2px 2px #212121;
 }
-
 
 .is-active .menu-button {
   color: #ff0;
@@ -189,41 +198,45 @@ body {
 
 .sub-menu a::before {
   content: "\e805";
-  font-family: 'fontello';
+  font-family: "fontello";
   font-weight: normal;
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
+  margin-right: 0.2em;
   text-align: center;
   font-variant: normal;
   text-transform: none;
   line-height: 1em;
-  margin-left: .2em;
+  margin-left: 0.2em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.sub-menu a:hover::before, .sub-menu a:focus::before {
+.sub-menu a:hover::before,
+.sub-menu a:focus::before {
   content: "\e801";
 }
 
-.sub-menu a:hover, .sub-menu a:focus {
+.sub-menu a:hover,
+.sub-menu a:focus {
   color: #f00;
 }
 
 /* visual area */
-/* at sign rule */ 
+/* at sign rule */
 @keyframes moveEffect {
   0% {
     font-size: 12px;
-    color: rgba(0,0,0,0.2);
-    transform: translate(0,0);
+    /* color: rgba(0,0,0,0.2); */
+    color: hsla(0, 0%, 0%, 0);
+    transform: translate(0, 0);
   }
   100% {
     font-size: 24px;
-    color: rgba(0,0,0,1);
-    transform: translate(400px,75px);
+    /*color: rgba(0,0,0,1);*/
+    color: hsla(0, 0%, 0%, 1);
+    transform: translate(400px, 75px);
   }
 }
 
@@ -234,11 +247,13 @@ body {
 }
 
 .visual-text {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  /* background-color: coral; */
+  font-family: Georgia, "Times New Roman", Times, serif;
   animation-name: moveEffect;
-  animation-duration: 2000ms;
+  animation-duration: 3000ms;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  background-color: coral;
+  position: absolute;
 }
 
 /* main area */
@@ -255,7 +270,7 @@ body {
   overflow는 넘치는 영역에 대한 처리를 하는 역할을 한다.
   잠재적 위험도: position property로 좌표값을 사용할 경우 일부가 안보이는 경우가 생긴다.
   */
-  
+
   /* BFC = block formatting context, IFC = inline formatting context */
 
   /* 부모요소에 float을 적용할 경우는 double float할 때 */
@@ -315,7 +330,8 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 
 /* footer area */
 .footer {
-  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 70%, #fff 100%);
+  background: #ccc
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 70%, #fff 100%);
 }
 .footer-inner {
   background: silver;
