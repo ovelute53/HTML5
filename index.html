@@ -1,164 +1,186 @@
 <!DOCTYPE html>
 <!-- DTD 표준모드를 의미함 -->
 <html lang="ko-KR">
-<head>
-  <meta charset="UTF-8" />
-  <!-- charset= character set을 의미 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- X= 비표준, UA= user, Compatible= 호환성 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- device의 크기에 맞게 viewport 설정 -->
-  <title>웹카페</title>
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="./styles/style.css" />
-  <script src="./js/main.js" defer></script>
-  <!-- rel=relation href= 참조영역/ 상대경로 -->
-</head>
-<body>
-  <!-- # = id, . = class -->
-  <!-- +를 이용하여 한번에 표기할 수 있음. -->
-  <header class="header">
-    <!-- logo start -->
-    <h1 class="logo">
-      <a href="./index-complete.html">
-        <img src="./assets/logo.png" alt="web cafe" />
-        <!-- alt요소는 필수! img에 자체적으로 width, height 값을 주면 성능 상 도움을 줄 수 있다. -->
-      </a>
-    </h1>
-    <ul class="member">
-      <li><a href="/">홈</a></li>
-      <li><span class="divider" aria-hidden="true">:</span><a href="/">로그인</a></li>
-      <li><span class="divider" aria-hidden="true">:</span><a href="/">회원가입</a></li>
-      <li><span class="divider" aria-hidden="true">:</span><a href="/">사이트맵</a></li>
-      <li><span class="divider" aria-hidden="true">:</span><a href="/">english</a></li>
-    </ul>
-    <nav class="navigation">
-      <h2 class="a11y-hidden">메인 메뉴</h2>
-      <ul class="menu">
-        <li class="menu-item  is-active">
-          <button type="button" class="menu-button">HTML에 대해</button>
-          <ul class="sub-menu menu-html">
-            <li>
-              <a href="/">HTML5 소개</a>
-            </li>
-            <li>
-              <a href="/">레퍼런스 소개</a>
-            </li>
-            <li>
-              <a href="/">활용예제</a>
-            </li>
-          </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- charset= character set을 의미 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- X= 비표준, UA= user, Compatible= 호환성 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- device의 크기에 맞게 viewport 설정 -->
+    <title>웹카페</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./js/main.js" defer></script>
+    <!-- rel=relation href= 참조영역/ 상대경로 -->
+  </head>
+  <body>
+    <!-- # = id, . = class -->
+    <!-- +를 이용하여 한번에 표기할 수 있음. -->
+    <header class="header">
+      <!-- logo start -->
+      <h1 class="logo">
+        <a href="./index-complete.html">
+          <img src="./assets/logo.png" alt="web cafe" />
+          <!-- alt요소는 필수! img에 자체적으로 width, height 값을 주면 성능 상 도움을 줄 수 있다. -->
+        </a>
+      </h1>
+      <ul class="member">
+        <li><a href="/">홈</a></li>
+        <li>
+          <span class="divider" aria-hidden="true">:</span
+          ><a href="/">로그인</a>
         </li>
-        <li class="menu-item">
-          <button type="button" class="menu-button">CSS에 대해</button>
-          <ul class="sub-menu menu-css">
-            <li>
-              <a href="/">CSS 소개</a>
-            </li>
-            <li>
-              <a href="/">CSS2 VS CSS3</a>
-            </li>
-            <li>
-              <a href="/">CSS 애니메이션</a>
-            </li>
-            <li>
-              <a href="/">CSS Framework</a>
-            </li>
-          </ul>
+        <li>
+          <span class="divider" aria-hidden="true">:</span
+          ><a href="/">회원가입</a>
         </li>
-        <li class="menu-item">
-          <button type="button" class="menu-button">웹표준</button>
-          <ul class="sub-menu menu-standards">
-            <li>
-              <a href="/">웹표준 이란?</a>
-            </li>
-            <li>
-              <a href="/">W3C</a>
-            </li>
-            <li>
-              <a href="/">HTML5의 현재와 미래</a>
-            </li>
-          </ul>
+        <li>
+          <span class="divider" aria-hidden="true">:</span
+          ><a href="/">사이트맵</a>
         </li>
-        <li class="menu-item">
-          <button type="button" class="menu-button">웹 접근성</button>
-          <ul class="sub-menu menu-accessibility">
-            <li>
-              <a href="/">웹 접근성의 개요</a>
-            </li>
-            <li>
-              <a href="/">장애 환경의 이해</a>
-            </li>
-            <li>
-              <a href="/">장차법</a>
-            </li>
-            <li>
-              <a href="/">웹 접근성 품질마크</a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <button type="button" class="menu-button">묻고 답하기</button>
-          <ul class="sub-menu menu-qna">
-            <li>
-              <a href="/">묻고 답하기</a>
-            </li>
-            <li>
-              <a href="/">FAQ</a>
-            </li>
-            <li>
-              <a href="/">1대1 질문</a>
-            </li>
-            <li>
-              <a href="/">웹표준</a>
-            </li>
-            <li>
-              <a href="/">웹 접근성</a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <button type="button" class="menu-button">자료실</button>
-          <ul class="sub-menu menu-archive">
-            <li>
-              <a href="/">공개 자료실</a>
-            </li>
-            <li>
-              <a href="/">이미지 자료실</a>
-            </li>
-            <li>
-              <a href="/">웹표준 자료실</a>
-            </li>
-            <li>
-              <a href="/">웹 접근성 자료실</a>
-            </li>
-          </ul>
+        <li>
+          <span class="divider" aria-hidden="true">:</span
+          ><a href="/">english</a>
         </li>
       </ul>
-    </nav>
-  </header>
+      <nav class="navigation">
+        <h2 class="a11y-hidden">메인 메뉴</h2>
+        <ul class="menu">
+          <li class="menu-item is-active">
+            <button type="button" class="menu-button">HTML에 대해</button>
+            <ul class="sub-menu menu-html">
+              <li>
+                <a href="/">HTML5 소개</a>
+              </li>
+              <li>
+                <a href="/">레퍼런스 소개</a>
+              </li>
+              <li>
+                <a href="/">활용예제</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <button type="button" class="menu-button">CSS에 대해</button>
+            <ul class="sub-menu menu-css">
+              <li>
+                <a href="/">CSS 소개</a>
+              </li>
+              <li>
+                <a href="/">CSS2 VS CSS3</a>
+              </li>
+              <li>
+                <a href="/">CSS 애니메이션</a>
+              </li>
+              <li>
+                <a href="/">CSS Framework</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <button type="button" class="menu-button">웹표준</button>
+            <ul class="sub-menu menu-standards">
+              <li>
+                <a href="/">웹표준 이란?</a>
+              </li>
+              <li>
+                <a href="/">W3C</a>
+              </li>
+              <li>
+                <a href="/">HTML5의 현재와 미래</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <button type="button" class="menu-button">웹 접근성</button>
+            <ul class="sub-menu menu-accessibility">
+              <li>
+                <a href="/">웹 접근성의 개요</a>
+              </li>
+              <li>
+                <a href="/">장애 환경의 이해</a>
+              </li>
+              <li>
+                <a href="/">장차법</a>
+              </li>
+              <li>
+                <a href="/">웹 접근성 품질마크</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <button type="button" class="menu-button">묻고 답하기</button>
+            <ul class="sub-menu menu-qna">
+              <li>
+                <a href="/">묻고 답하기</a>
+              </li>
+              <li>
+                <a href="/">FAQ</a>
+              </li>
+              <li>
+                <a href="/">1대1 질문</a>
+              </li>
+              <li>
+                <a href="/">웹표준</a>
+              </li>
+              <li>
+                <a href="/">웹 접근성</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <button type="button" class="menu-button">자료실</button>
+            <ul class="sub-menu menu-archive">
+              <li>
+                <a href="/">공개 자료실</a>
+              </li>
+              <li>
+                <a href="/">이미지 자료실</a>
+              </li>
+              <li>
+                <a href="/">웹표준 자료실</a>
+              </li>
+              <li>
+                <a href="/">웹 접근성 자료실</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <div class="visual">
-    <div class="visual-text">
-      Web Standards &amp; Accssibility
+    <div class="visual">
+      <div class="visual-text">Web Standards &amp; Accssibility</div>
     </div>
-  </div>
-  <main class="main">
-    <div class="group group1">그룹1</div>
-    <div class="group group2">그룹2</div>
-    <div class="group group3">그룹3</div>
-    <!-- 
+
+    <main class="main">
+      <div class="group group1">
+        <section class="login">
+          <h2 class="login-title">로그인</h2>
+          <form action="" class="login-form">
+            <ul class="sign">
+              <li><a href="/">회원가입</a></li>
+              <li><a href="/">아이디/비밀번호 찾기</a></li>
+            </ul>
+          </form>
+        </section>
+      </div>
+      <div class="group group2">그룹2</div>
+      <div class="group group3">그룹3</div>
+      <!-- 
       <div class="clearfix"></div>
       float요소를 위해 clearfix라는 비어있는 division을 생성 
-    -->
-  </main>
-  <article class="slogan">슬로건</article>
-  <footer class="footer">
-    <!-- footer area를 나누는 이유는 footer 내용과 footer gradient를 구분하기 위해서이다. -->
-    <div class="footer-inner">
-      푸터
-    </div>
-  </footer>
-  
-</body>
+    --></main>
+    <article class="slogan">슬로건</article>
+    <footer class="footer">
+      <!-- footer area를 나누는 이유는 footer 내용과 footer gradient를 구분하기 위해서이다. -->
+      <div class="footer-inner">푸터</div>
+    </footer>
+  </body>
 </html>
