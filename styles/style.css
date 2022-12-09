@@ -435,6 +435,36 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   margin-right: 8px;
   cursor: pointer;
 }
+
+.validation-list {
+  margin-top: 25px;
+  /* text-align: center; */
+}
+
+.validation-list li {
+  margin-bottom: 10px;
+}
+
+.validation-list a {
+  display: block;
+  background: url(./images/validation_icon.png) no-repeat 25px 50%,
+    #ccc linear-gradient(to bottom, #ccc, #fefefe);
+  border: 1px solid #bbb;
+  border-radius: 20px;
+  padding: 10px 20px 10px 50px;
+  font-weight: 500;
+}
+
+.validation-list a:hover,
+.validation-list a:focus {
+  color: red;
+}
+
+/* .validation-list a::before {
+  content: url(./images/validation_icon.png);
+  vertical-align: middle;
+} */
+
 /* slogan area */
 .slogan {
   background: skyblue;
