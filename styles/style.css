@@ -377,6 +377,8 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 
 .login-form fieldset {
   position: relative;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
 }
 
 .login-form label {
@@ -384,30 +386,54 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   width: 50px;
 }
 
+.user-email,
+.user-password {
+  margin-bottom: 5px;
+}
+
 .login-form input {
   width: 90px;
+  height: 24px;
+  margin-left: 5px;
+  padding: 1px 1px 1px 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .login-button {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50px;
-  height: 50px;
+  height: 52px;
   background-color: coral;
   color: #fff;
-  border: none;
+  border: 0;
+  padding: 0 8px;
   border-radius: 5px;
 }
 
 .sign {
   margin-bottom: 10px;
-  padding: 0 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   border-radius: 0 0 5px 5px;
   background-color: #fff;
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: space-between;
+}
+
+.sign a {
+  display: block;
+  padding: 6px 0;
+  letter-spacing: -1px;
+}
+
+.sign a::before {
+  content: "\e803";
+  color: coral;
+  font-family: "fontello";
+  margin-right: 8px;
+  cursor: pointer;
 }
 /* slogan area */
 .slogan {
