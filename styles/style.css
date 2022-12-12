@@ -465,11 +465,51 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   vertical-align: middle;
 } */
 
+/* 웹 관련 용어 */
+
 .term {
   margin-top: 20px;
-  padding: 20px;
+  padding: 10px 15px;
   border-radius: 5px;
-  background: #ccc linear-gradient(to bottom, #ccc, #fefefe);
+  border: 1px solid #bbb;
+  background: #ccc linear-gradient(to bottom, #ccc, #ddd);
+}
+
+.term-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.term-list {
+  margin-top: 10px;
+}
+
+.term-list div {
+  background-color: pink;
+  margin-top: 10px;
+  display: flow-root;
+}
+
+.term-list-subject {
+  background-color: #fff;
+  float: right;
+  width: 145px;
+}
+
+.term-list-thumbnail {
+  background-color: skyblue;
+  float: left;
+}
+
+.term-list-thumbnail img {
+  vertical-align: middle;
+  /* 이미지 아래쪽 갭이 사라진다. display: block;과 같은 효과 */
+}
+
+.term-list-brief {
+  background-color: lime;
+  float: right;
+  width: 145px;
 }
 
 /* slogan area */
