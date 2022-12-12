@@ -485,19 +485,22 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 }
 
 .term-list div {
-  background-color: pink;
   margin-top: 10px;
   display: flow-root;
 }
 
-.term-list-subject {
-  background-color: #fff;
+.term-list-subject,
+.term-list-brief {
   float: right;
   width: 145px;
 }
 
+.term-list-subject {
+  color: #296897;
+  font-weight: 500;
+}
+
 .term-list-thumbnail {
-  background-color: skyblue;
   float: left;
 }
 
@@ -507,9 +510,17 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 }
 
 .term-list-brief {
-  background-color: lime;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.even .term-list-subject,
+.even .term-list-brief {
+  float: left;
+}
+
+.even .term-list-thumbnail {
   float: right;
-  width: 145px;
 }
 
 /* slogan area */
