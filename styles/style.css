@@ -568,6 +568,72 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   white-space: nowrap;
   font-size: 1.2rem;
 }
+
+/* 공지사항 및 자료실 */
+.board {
+  /* background-color: yellow; */
+  margin-top: 20px;
+  position: relative;
+}
+
+.tab-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.tab {
+  border: 1px solid #aaa;
+  background-color: #ccc;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  color: #666;
+}
+
+.tab-panel {
+  display: none;
+  margin-top: 15px;
+}
+
+.is-select.tab {
+  background-color: #fff;
+  color: #e85e2c;
+  border-color: currentColor currentColor #ffff currentColor;
+}
+
+.is-select.tab-panel {
+  display: block;
+}
+
+.board-list li {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.board-list a {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board-list time {
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.board-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+.icon-plus::before {
+  color: hsla(110, 50%, 40%, 1);
+}
+
 /* slogan area */
 .slogan {
   background: skyblue;
