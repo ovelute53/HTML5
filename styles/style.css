@@ -1,3 +1,4 @@
+@import url(./fonts.css);
 @import url(./normalize.css);
 @import url(./reset.css);
 @import url(./fontello.css);
@@ -345,11 +346,11 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 }
 
 .group2 {
-  background-color: salmon;
+  /* background-color: salmon; */
   width: 380px;
 }
 .group3 {
-  background-color: gold;
+  /* background-color: gold; */
   width: 190px;
 }
 
@@ -523,6 +524,50 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   float: right;
 }
 
+/* search-form */
+.search-form {
+  padding: 15px 25px 10px;
+  border-radius: 15px 15px 0 0;
+  border: 1px solid #bbb;
+  background: #ccc linear-gradient(to bottom, #ccc, #ddd);
+}
+
+.search-form-inner {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.form-group {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-right: 10px;
+}
+.form-group-label {
+  white-space: nowrap;
+  margin-right: 10px;
+}
+.form-group-input {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  height: 24px;
+  padding: 1px 1px 1px 5px;
+  flex-grow: 1;
+  /* min-width: 0;
+  max-width: 100%; */
+  /* 브라우저마다 agent가 다르기 때문에 0값으로 지정해준다. */
+}
+.button-fill {
+  background-color: #212121;
+  color: #ffffff;
+  height: 24px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
 /* slogan area */
 .slogan {
   background: skyblue;
