@@ -465,6 +465,13 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   vertical-align: middle;
 } */
 
+.term {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background: #ccc linear-gradient(to bottom, #ccc, #fefefe);
+}
+
 /* slogan area */
 .slogan {
   background: skyblue;
