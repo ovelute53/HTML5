@@ -554,8 +554,8 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   height: 24px;
   padding: 1px 1px 1px 5px;
   flex-grow: 1;
-  /* min-width: 0;
-  max-width: 100%; */
+  min-width: 0;
+  width: 100%;
   /* 브라우저마다 agent가 다르기 때문에 0값으로 지정해준다. */
 }
 .button-fill {
