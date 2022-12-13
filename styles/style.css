@@ -700,6 +700,22 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   padding: 8px;
 }
 
+/* 신규 이벤트 및 관련사이트 */
+.gradient-effect {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+.accent-color {
+  color: #e85e2c;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 /* slogan area */
 .slogan {
   background: skyblue;
