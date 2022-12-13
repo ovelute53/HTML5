@@ -636,15 +636,61 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 
 /* news */
 .news {
-  background-color: yellow;
   margin-top: 20px;
   position: relative;
 }
 
+.news::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(to right, #ccc, #bbb, #eee, #fff);
+}
+
 .news-title {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   color: #e85e2c;
+}
+
+.news-link {
+  display: block;
+}
+
+.news-item {
+  margin-top: 35px;
+  padding-left: 130px;
+  position: relative;
+}
+
+.news-item-title {
+  font-weight: 500;
+}
+
+.news-item-date {
+  display: block;
+  margin: 5px 0 10px;
+}
+
+.news-item-brief {
+  line-height: 1.5;
+}
+
+.news-item-thumbnail {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  /* vertical-align: middle; */
+  text-align: center;
+  font-size: 13px;
+}
+
+.news-item-thumbnail img {
+  box-shadow: 0 15px 10px 5px #ddd;
+  margin-bottom: 15px;
 }
 
 .news-more {
