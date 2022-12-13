@@ -765,10 +765,29 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   border: 1px solid #aaa;
   border-radius: 5px;
   margin-top: 10px;
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms 0ms ease-in-out, padding 400ms 400ms ease-in-out;
+  padding: 0;
+}
+
+.related-list li {
+  height: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.related-list a {
+  flex-grow: 1;
+  padding: 0 10px;
 }
 
 .related-list:hover,
 .related-list:focus {
+  height: 147px;
+  padding: 10px 0;
 }
 
 /* slogan area */
