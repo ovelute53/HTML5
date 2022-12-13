@@ -2,6 +2,7 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 @import url(./fontello.css);
+@import url(./modules.css);
 
 /* 숨김 컨텐츠 */
 .a11y-hidden,
@@ -701,19 +702,73 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 }
 
 /* 신규 이벤트 및 관련사이트 */
-.gradient-effect {
-  background: #ccc linear-gradient(to bottom, #ccc, #eee);
-  border: 1px solid #bbb;
+
+.event {
+  border-bottom: 1px solid #aaa;
+  /* position: relative; */
+}
+
+.event-title {
+  display: inline-block;
+}
+
+.event-button-wrapper {
+  overflow: hidden;
+  height: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+  float: right;
+}
+
+/* IR기법 -> Image Replacement */
+
+.event-button {
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 18px 0 0 0;
+  background: url(./images/back_forward.png) no-repeat;
+  background-position: left;
+  /* text-indent: -9999px; */
+}
+
+.event-button-next {
+  background-position: -36px 0;
+}
+
+.event-button:focus {
+  outline-offset: -2px;
+}
+
+.event-thumbnail,
+.event-brief {
+  margin: 10px 0;
+}
+
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
+.event-brief {
+  line-height: 1.5;
+}
+
+.related {
+  margin-top: 10px;
+}
+
+.related-list {
+  background-color: #fff;
+  border: 1px solid #aaa;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
-.accent-color {
-  color: #e85e2c;
-}
-
-.text-xl {
-  font-size: 1.5rem;
-  font-weight: 700;
+.related-list:hover,
+.related-list:focus {
 }
 
 /* slogan area */
