@@ -634,6 +634,26 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   color: hsla(110, 50%, 40%, 1);
 }
 
+/* news */
+.news {
+  background-color: yellow;
+  margin-top: 20px;
+  position: relative;
+}
+
+.news-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e85e2c;
+}
+
+.news-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
 /* slogan area */
 .slogan {
   background: skyblue;
