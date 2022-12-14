@@ -792,19 +792,16 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 
 /* 인기사이트 */
 .favorite {
-  background-color: pink;
   position: relative;
 }
 
 .favorite-list {
-  background-color: yellow;
   list-style-type: none;
   /* font-size: 1.6rem; */
 }
 
 .favorite-list li {
   margin-top: 10px;
-  background: pink;
   position: relative;
 }
 
@@ -833,9 +830,9 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   content: "4";
 }
 
-.favorite-list a {
-  /* font-size: 24px; */
-}
+/* .favorite-list a {
+  font-size: 24px;
+} */
 
 .up,
 .stop,
@@ -848,7 +845,7 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   width: 20px;
   height: 11px;
   margin-left: auto;
-  background: lime url(./images/rank.png) no-repeat;
+  background: url(./images/rank.png) no-repeat;
   /* vertical-align: middle; */
 }
 
@@ -871,15 +868,49 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 
 /* slogan area */
 .slogan {
-  background: skyblue;
-  height: 10vh;
   clear: both;
+  position: relative;
+  padding: 15px 100px 15px 180px;
+}
+
+.slogan-title {
+  width: 110px;
+  height: 83px;
+  text-align: center;
+  line-height: 83px;
+  position: absolute;
+  bottom: -25px;
+  left: 35px;
+}
+
+.slogan-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./images/coffee.png) no-repeat 0 0;
+}
+
+.slogan-content {
+  color: #a09784;
+}
+
+.slogan-content q::before {
+  display: inline-block;
+  font-size: 3rem;
+  transform: translateY(10px);
+}
+
+.slogan-content q::after {
+  content: "";
 }
 
 /* footer area */
 .footer {
   background: #ccc
-    linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 70%, #fff 100%);
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
 }
 .footer-inner {
   background: silver;
