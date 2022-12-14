@@ -7,13 +7,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* content-box: 설정한 width 값 + padding + border + margin */
-  /* border-box: 설정한 width 값 속에 margin + border + padding 포함. */
 }
-
-/* footer는 100%, 나머지 영역은 940px로 적용 */
-/* 좌우 여백이 브라우저, 창의 크기마다 유동적이게끔 설정 */
-
 
 /* 링크 스타일 */
 a {
@@ -24,154 +18,69 @@ a {
 /* 본문 스타일 */
 body {
   color: #212121;
-  background-color: #ffc;
-  /* margin: 0;
-     -> 모든 브라우저는 고유의 agent stylesheet가 있다.
-     -> agenmt stylesheet의 margin값을 0으로 설정. */
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-weight: 400;
+  background: #ccc;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
-/* layout */
-.header, .visual, .main, .slogan, .footer-inner {
+/* 레이아웃 */
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
   width: 940px;
   margin: 0 auto;
-  /* 0 auto = 브라우저의 크기 맞게 왼쪽,오른쪽 여백을 자동으로 변경된다. */
 }
 
-/* header */
+/* 헤더 */
 .header {
   background: #fff;
   padding: 0 30px;
-  height: 15vh;
   border-radius: 0 0 15px 15px;
-  /* vh= viewpoint의 약어 */
 }
 
 .member {
   background-color: pink;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-}
-/* :before / ::before => first-child */
-/* :after / ::after => last-child */
-/* .member li::before {
-  content: ":";
 }
 
-li.first::before {
-  content:"" ;
-} */
-
-/* .member li:nth-child(n+2)::before{
-  content: ":";
-  background-color: skyblue;
-}
-
-.member li:nth-child(n+2):nth-child(-n+4){
-  background-color: yellow;
-} */
-
-/* .member li::before {
-  content: "\e800";
-  font-family: fontello;
-  font-style: normal;
-  font-weight: normal;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-} */
-.member a {
-  text-transform: uppercase;
-}
-
-/* visual area */
+/* 비주얼 */
 .visual {
-  background: orange;
-  height: 10vh;
+  height: 120px;
 }
-
-/* main area */
+/* 메인 */
 .main {
-  background: lightgreen;
-  display: flex;
+  background: #fff;
   min-height: 450px;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 30px;
-  /* flex-flow: row nowrap;의 short hand로 간단하게 표기 가능 */
-  /* main area에 height를 지정하지 않았을 때 float 설정을 하게된다면 main area의 height가 줄어든다. */
-  /* 
-  height가 지정되지 않았을 떄 float의 부모요소에 display: flow-root; 적용시키면 레이아웃이 무너지지 않는다.
-
-  float의 부모요소에 overflow: hidden;을 사용할 경우 자주 쓰지만 올바른 방법은 아니다.
-  overflow는 넘치는 영역에 대한 처리를 하는 역할을 한다.
-  잠재적 위험도: position property로 좌표값을 사용할 경우 일부가 안보이는 경우가 생긴다.
-  */
-  
-  /* BFC = block formatting context, IFC = inline formatting context */
-
-  /* 부모요소에 float을 적용할 경우는 double float할 때 */
+  display: flow-root;
 }
-/* 
-.main::before {
-  content: "첫번째 자식요소입니다.";
+
+.group {
+  float: left;
 }
-.main::after {
-  content: "마지막 자식요소입니다.";
-
-  가상요소를 만들어내는 요소이다.
-} 
-*/
-
-/* 
-첫 번째 그룹 250px, 중간 380px, 마지막 190px 각 여백 30px = 940px
-position, float, display(inline-block, flex, grid) 방식으로 영역 설정할 수 있음.
-*/
-/* .clearfix {
-  clear: both;
-  clear속성이 동작하는 동안 flow속성의 높이를 읽는다.
-  float을 무시할거야!
-} */
-
-/* .main::after {
-  content: "";
-  clear: both;
-  display: block;
-  
-  ::after요소는 inline요소이기 떄문에 block처리한다.
-} */
 
 .group1 {
-  background-color: violet;
   width: 250px;
 }
+
 .group2 {
-  background-color: salmon;
   width: 380px;
 }
 .group3 {
-  background-color: gold;
-  /*flex-grow: 1;*/
   width: 190px;
 }
 
-/* slogan area */
+/* 슬로건 */
 .slogan {
   background: skyblue;
-  height: 10vh;
+  clear: both;
 }
-
-/* footer area */
+/* 푸터 */
 .footer {
   background: gray;
 }
 .footer-inner {
   background: silver;
-  height: 15vh;
 }
