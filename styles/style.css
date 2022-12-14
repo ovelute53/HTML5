@@ -799,20 +799,61 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
 .favorite-list {
   background-color: yellow;
   list-style-type: none;
+  /* font-size: 1.6rem; */
 }
 
 .favorite-list li {
   margin-top: 10px;
+  background: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
-.favorite li::before {
-  content: "1";
+.favorite-list li::before {
   background-color: #aaa;
   color: #fff;
-  padding: 1px 6px;
   font-size: 1.2rem;
   margin-right: 5px;
   border-radius: 3px;
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.favorite li.no1::before {
+  content: "1";
+}
+.favorite li.no2::before {
+  content: "2";
+}
+.favorite li.no3::before {
+  content: "3";
+}
+.favorite li.no4::before {
+  content: "4";
+}
+
+.up,
+.stop,
+.down {
+  display: inline-block;
+  width: 20px;
+  height: 11px;
+  margin-left: auto;
+  background: lime url(./images/rank.png) no-repeat;
+  /* vertical-align: middle; */
+}
+
+.up {
+  background-position: 100% 0%;
+}
+.stop {
+  background-position: 100% 48%;
+}
+.down {
+  background-position: 100% 100%;
 }
 
 .favorite-more {
