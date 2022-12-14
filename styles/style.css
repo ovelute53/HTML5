@@ -790,6 +790,38 @@ position, float, display(inline-block, flex, grid) 방식으로 영역 설정할
   padding: 10px 0;
 }
 
+/* 인기사이트 */
+.favorite {
+  background-color: pink;
+  position: relative;
+}
+
+.favorite-list {
+  background-color: yellow;
+  list-style-type: none;
+}
+
+.favorite-list li {
+  margin-top: 10px;
+}
+
+.favorite li::before {
+  content: "1";
+  background-color: #aaa;
+  color: #fff;
+  padding: 1px 6px;
+  font-size: 1.2rem;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+.favorite-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
 /* slogan area */
 .slogan {
   background: skyblue;
