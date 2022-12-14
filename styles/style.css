@@ -100,14 +100,30 @@ body {
   margin-top: 20px;
 }
 
+.event {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.event-title {
+}
+
 .event-button-wrapper {
-  background-color: yellow;
   overflow: hidden;
-  padding: 4px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  gap: 5px;
+  /* padding: 4px; */
   /* height: 20px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center; */
+}
+
+#eventDetail {
 }
 
 .event-button {
