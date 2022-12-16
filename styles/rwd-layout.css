@@ -1,60 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
+
+.group1 .box {
+  background: gold;
+}
+.group2 .box {
+  background: pink;
+}
+.group3 .box {
+  background: lightgreen;
+}
+.group4 .box {
+  background: skyblue;
+}
+.group5 .box {
+  background: salmon;
+}
+.group6 .box {
+  background: violet;
+}
+.group7 .box {
+  background: aquamarine;
+}
+.group8 .box {
+  background: lightseagreen;
+}
+.group9 .box {
+  background: MediumPurple;
+}
+.group10 .box {
+  background: MidnightBlue;
+}
+.group11 .box {
+  background: Olive;
+}
+.group12 .box {
+  background: SandyBrown;
+}
+
+/* 모든 디바이스 */
 .container {
   background: silver;
   border: 1px solid red;
   display: flex;
   flex-flow: row wrap;
+  padding: 12px;
 }
 
-.group1 {
-  background: skyblue;
-}
-.group2 {
-  background: lime;
-}
-.group3 {
-  background: yellow;
-}
-.group4 {
-  background: orange;
-}
-.group5 {
-  background: maroon;
-}
-.group6 {
-  background: mediumaquamarine;
-}
-.group7 {
-  background: antiquewhite;
-}
-.group8 {
-  background: slategray;
-}
-.group9 {
-  background: lavender;
-}
-.group10 {
-  background: fuchsia;
-}
-.group11 {
-  background: tan;
-}
-.group12 {
-  background: indigo;
-}
-
-[class*="group"] {
+div[class*="group"] {
   width: 100%;
-  height: 50px;
+  margin: 0;
+}
+
+.box {
+  margin: 12px;
+  height: 150px;
 }
 
 /* 768px 이상일 때 */
 @media (min-width: 768px) {
   div[class*="group"] {
     width: 50%;
-    height: 100px;
+  }
+
+  div.group1,
+  div.group4 {
+    width: 100%;
   }
 }
 
@@ -62,6 +78,14 @@ body {
 @media (min-width: 1280px) {
   div[class*="group"] {
     width: 25%;
-    height: 200px;
+  }
+
+  div.group2 {
+    order: 1;
+  }
+
+  div.group1,
+  div.group12 {
+    width: 75%;
   }
 }
