@@ -6,11 +6,6 @@ body {
   margin: 0;
 }
 
-.container {
-  background: silver;
-  border: 1px solid red;
-}
-
 .group1 {
   background: gold;
 }
@@ -46,4 +41,30 @@ body {
 }
 .group12 {
   background: SandyBrown;
+}
+
+.container {
+  background: silver;
+  border: 1px solid red;
+  display: grid;
+  grid-template-rows: auto;
+}
+
+/* small device */
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: ;
+  }
+}
+/* medium device */
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: ;
+  }
+}
+/* large device */
+@media (min-width: 1280px) {
+  .container {
+    grid-template-columns: ;
+  }
 }
