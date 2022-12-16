@@ -4,6 +4,8 @@ body {
 .container {
   background: silver;
   border: 1px solid red;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .group1 {
