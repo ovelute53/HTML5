@@ -42,3 +42,24 @@ body {
 .group12 {
   background: indigo;
 }
+
+[class*="group"] {
+  width: 100%;
+  height: 50px;
+}
+
+/* 768px 이상일 때 */
+@media (min-width: 768px) {
+  div[class*="group"] {
+    width: 50%;
+    height: 100px;
+  }
+}
+
+/* 1280px 이상일 때 */
+@media (min-width: 1280px) {
+  div[class*="group"] {
+    width: 25%;
+    height: 200px;
+  }
+}
