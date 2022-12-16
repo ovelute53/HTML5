@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+.container {
+  background: silver;
+  border: 1px solid red;
+}
+
+.group1 {
+  background: skyblue;
+}
+.group2 {
+  background: lime;
+}
+.group3 {
+  background: yellow;
+}
+.group4 {
+  background: orange;
+}
+.group5 {
+  background: maroon;
+}
+.group6 {
+  background: mediumaquamarine;
+}
+.group7 {
+  background: antiquewhite;
+}
+.group8 {
+  background: slategray;
+}
+.group9 {
+  background: lavender;
+}
+.group10 {
+  background: fuchsia;
+}
+.group11 {
+  background: tan;
+}
+.group12 {
+  background: indigo;
+}
